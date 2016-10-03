@@ -1,5 +1,6 @@
 "*":
-  "atom-ctags": {}
+  "atom-ctags":
+    cmdArgs: "--exclude=*.yml --exclude=*.json --exclude=*.md"
   autosave:
     enabled: true
   core:
