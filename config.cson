@@ -6,17 +6,21 @@
   core:
     disabledPackages: [
       "symbols-view"
+      "linter"
     ]
     packagesWithKeymapsDisabled: [
       "ruby-test"
       "toggle-quotes"
     ]
   editor:
+    fontSize: 11
     invisibles: {}
     showIndentGuide: true
     showInvisibles: true
   "exception-reporting":
     userId: "28f335fb-df1e-21bd-6a98-6698c2a35043"
+  linter:
+    showErrorPanel: false
   "open-recent": {}
   tabs:
     usePreviewTabs: false
