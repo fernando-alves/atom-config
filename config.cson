@@ -6,6 +6,7 @@
   core:
     disabledPackages: [
       "symbols-view"
+      "ruby-test-switcher"
     ]
     packagesWithKeymapsDisabled: [
       "ruby-test"
@@ -13,18 +14,19 @@
     ]
     telemetryConsent: "no"
   editor:
-    fontSize: 13
     invisibles: {}
     showIndentGuide: true
     showInvisibles: true
   "exception-reporting":
     userId: "28f335fb-df1e-21bd-6a98-6698c2a35043"
-  linter:
-    showErrorPanel: false
+  linter: {}
+  "linter-jshint":
+    disableWhenNoJshintrcFileInPath: true
+  "linter-ui-default": {}
   "open-recent": {}
   tabs:
     usePreviewTabs: false
   "tree-view":
-    hideVcsIgnoredFiles: true
+    squashDirectoryNames: true
   welcome:
     showOnStartup: false
