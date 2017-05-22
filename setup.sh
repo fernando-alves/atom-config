@@ -2,16 +2,37 @@
 set -e
 
 BASE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+ATOM_HOME=$HOME/.atom
+RED='\033[0;31m'
+NO_COLOR='\033[0m'
 
-if [ ! -d ~/.atom ]; then
-  mkdir ~/.atom
-fi;
+function assert_atom_home_is_created {
+  if [ ! -d $ATOM_HOME ]; then
+    mkdir $ATOM_HOME
+  fi;
+}
 
-ln -sf $BASE_DIR/config.cson ~/.atom/config.cson
-ln -sf $BASE_DIR/keymap.cson ~/.atom/keymap.cson
+function link_config_files {
+  echo 'Linking config files'
+  ln -sf $BASE_DIR/config.cson $ATOM_HOME/config.cson
+  ln -sf $BASE_DIR/keymap.cson $ATOM_HOME/keymap.cson
+}
 
-if [[ $(which apm) ]]; then
+function check_if_apm_is_installed {
+  if [[ ! $(which apm) ]] ; then
+    echo "${RED}Please make sure apm is installed before proceeding${NO_COLOR}"
+    exit 1
+  fi;
+}
+
+function install_packages {
   while read package ; do
     apm install $package
   done < $BASE_DIR/packages
-fi;
+}
+
+assert_atom_home_is_created
+check_if_apm_is_installed
+
+link_config_files
+install_packages
