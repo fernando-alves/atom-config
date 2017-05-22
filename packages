@@ -1,7 +1,10 @@
 atom-ctags
 copy-path
 open-recent
-rails-latest-migration
-ruby-test-switcher
 set-syntax
 toggle-quotes
+editorconfig
+linter
+linter-jshint
+linter-csslint
+language-docker
