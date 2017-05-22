@@ -26,9 +26,7 @@ function check_if_apm_is_installed {
 }
 
 function install_packages {
-  while read package ; do
-    apm install $package
-  done < $BASE_DIR/packages
+  apm install --packages-file $BASE_DIR/packages
 }
 
 assert_atom_home_is_created
