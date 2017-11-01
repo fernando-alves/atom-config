@@ -8,6 +8,7 @@
       "symbols-view"
       "ruby-test-switcher"
     ]
+    openEmptyEditorOnStart: false
     packagesWithKeymapsDisabled: [
       "ruby-test"
       "toggle-quotes"
@@ -23,10 +24,16 @@
   "linter-jshint":
     disableWhenNoJshintrcFileInPath: true
   "linter-ui-default": {}
+  "markdown-preview":
+    breakOnSingleNewline: true
   "open-recent": {}
+  "prettier-atom":
+    formatOnSaveOptions: {}
+    useEslint: true
   tabs:
     usePreviewTabs: false
   "tree-view":
     squashDirectoryNames: true
   welcome:
     showOnStartup: false
+  whitespace: {}

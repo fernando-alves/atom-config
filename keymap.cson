@@ -29,3 +29,4 @@
 '.platform-darwin atom-workspace':
   'cmd-shift-c': 'copy-path:copy-project-relative-path'
   'cmd-\'': 'toggle-quotes:toggle'
+  'cmd-.': 'test-jumper:jump'
